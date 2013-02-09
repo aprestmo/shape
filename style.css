@@ -1,0 +1,106 @@
+/*
+Theme Name: Shape
+Theme URI: http://themeshaper.com/
+Author: ThemeShaper
+Author URI: http://themeshaper.com/
+Description: The Shape theme is a simple, minimalist theme based on Underscores and the original Shape Theme by Ian Stewart. It was created especially as a learning theme for The Theme Shaper WordPress Theme Tutorial: 2nd Edition.
+Version: 2.0
+License: GNU General Public License
+License URI: license.txt
+Tags: light, white, one-column, two-columns, left-sidebar, right-sidebar, flexible-width, custom-backgroud, custom-header, custom-menu, featured-images, flexible-header, microformats, post-formats, rtl-language-support, threaded-comments, translation-ready
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* Reset default browser styles */
+@import url('css/reset.css');
+
+/* Rebuild default browser styles */
+@import url('css/rebuild.css');
+
+/* Basic WordPress Styles */
+@import url('css/wp-standard.css');
+
+/* Rammeverk for oppsett */
+@import url('');
+
+
+/* =Begin bidirectionality settings (do not change)
+-------------------------------------------------------------- */
+BDO[DIR="ltr"] {
+	direction: ltr;
+	unicode-bidi: bidi-override;
+}
+
+BDO[DIR="rtl"] {
+	direction: rtl;
+	unicode-bidi: bidi-override;
+}
+
+[DIR="ltr"] {
+   direction: ltr;
+   unicode-bidi: embed;
+}
+
+[DIR="rtl"] {
+   direction: rtl;
+   unicode-bidi: embed;
+}
+
+/* =Media Print
+    If you're working on a Child Theme, make sure that all
+	media queries are included in your style.css
+-------------------------------------------------------------- */
+@media print {
+
+    h1 {
+	    page-break-before: always;
+    }
+
+    h1,  h2,  h3,  h4,  h5,  h6 {
+	    page-break-after: avoid;
+    }
+
+    ul,  ol,  dl {
+	    page-break-before: avoid;
+    }
+}
+
+/*	Retina (HiDPI) Display
+    http://www.quirksmode.org/blog/archives/2012/06/devicepixelrati.html
+-------------------------------------------------------------- */
+@media 
+    only screen and (-moz-min-device-pixel-ratio:1.5), 
+    only screen and (-o-min-device-pixel-ratio:3/2), 
+    only screen and (-webkit-min-device-pixel-ratio:1.5), 
+    only screen and (min-device-pixel-ratio:1.5) {
+    
+    body {}
+}
+
+/* =Responsive (Mobile) Design
+-------------------------------------------------------------- */
+@media screen and (max-width: 980px) {
+
+    
+}
+
+@media screen and (max-width: 650px) {
+
+    
+}
+
+@media screen and (max-width: 480px) {
+
+   
+}
+
+@media screen and (max-width: 320px) {
+    
+    
+}
+
+@media screen and (max-width: 240px) {
+    
+    
+}
