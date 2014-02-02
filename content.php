@@ -28,16 +28,16 @@
     <?php endif; ?>
     
     <footer class="entry-meta">
-    	<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on search ?>
-        <?php
+    	<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages in search results ?>
+		<?php
 			// Translators: Used between list items, there is a space after comma
 			$categories_list = get_the_category_list( __( ', ', 'shape' ) );
 			if ( $categories_list && shape_categorized_blog() ) :
 		?>
         <span class="cat-links">
-        	<?php printf( __( 'Posted in %1$s', 'shape' ) ) ?>
-        </span>
-        <?php endif; // End if categories ?>
+			<?php printf( __( 'Posted in %1$s', 'shape' ), $categories_list ); ?>
+		</span>
+		<?php endif; // End if categories ?>
         
         <?php
 			// Translators: Used between list items, there is a space after comma

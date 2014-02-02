@@ -5,7 +5,7 @@
  * Displays all of the <head> section and evenrything up till <div id="main">.
  *
  * @package Shape
- * @since Shape 1.0
+ * @since Shape 1.1
  */
 ?>
 <!DOCTYPE html>
@@ -38,6 +38,12 @@ echo " | $site_description";
 if ( $paged >= 2 || $page >= 2 )
 echo ' | ' . sprintf( __( 'Page %s', 'shape' ), max( $paged, $page ) );
 ?></title>
+
+<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/images/icons/touch-icon-iphone.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="<?php echo get_template_directory_uri(); ?>/images/icons/touch-icon-ipad.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="<?php echo get_template_directory_uri(); ?>/images/icons/touch-icon-iphone-retina.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="<?php echo get_template_directory_uri(); ?>/images/icons/touch-icon-ipad-retina.png" />
+
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!--[if lt IE 9]>
@@ -50,10 +56,8 @@ echo ' | ' . sprintf( __( 'Page %s', 'shape' ), max( $paged, $page ) );
 
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
-		<hgroup>
-        	<h1 class="site-title"><a href="<?php echo home_url( '/' ) ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-            <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-        </hgroup>
+		<h1 class="site-title"><a href="<?php echo home_url( '/' ) ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+		<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 		
 		<?php $header_image = get_header_image();
         if ( ! empty( $header_image ) ) { ?>
@@ -64,7 +68,7 @@ echo ' | ' . sprintf( __( 'Page %s', 'shape' ), max( $paged, $page ) );
 
         <nav role="navigation" class="site-navigation main-navigation">
         	<h1 class="assistive-text"><?php _e( 'Menu', 'shape' ); ?></h1>
-            <div class="assistive-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', '_s' ); ?>"><?php _e( 'Skip to content', 'shape' ); ?></a></div>
+            <div class="assistive-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'shape' ); ?>"><?php _e( 'Skip to content', 'shape' ); ?></a></div>
             <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
         </nav><!-- .site-navigation .main-navigation -->
     </header><!-- #masthead .site-header -->
