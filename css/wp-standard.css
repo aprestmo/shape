@@ -87,8 +87,8 @@
     display: block;
 	}
 	
-.main-navigation li.current_page_item a,
-.main-navigation li.current-menu-item a {
+.main-navigation .current_page_item a,
+.main-navigation .current-menu-item a {
 	}
  
 /* Small menu */
@@ -163,7 +163,7 @@ img[class*="wp-image-"] {
 	
 .site-header img,
 .entry-content img,
-img.size-full {
+.size-full {
     max-width: 100%;
     width: auto; /* Prevent stretching of full-size images with height and width attributes in IE8 */
 	}
